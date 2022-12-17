@@ -155,4 +155,9 @@ namespace gaia
         return m_paths[0].m_length;
     }
 
+    path paths::getFirst()
+    {
+        return m_paths[0];
+    }
+
 }

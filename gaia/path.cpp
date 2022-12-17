@@ -48,4 +48,16 @@ namespace gaia
 		}
 
 	}
+	sf::Vector2f path::getPosition(int cityIndex)
+	{
+		return m_cities->getCity(cityIndex).getXY();
+	}
+	int path::lastCity()
+	{
+		return m_path[m_path.size() -1];
+	}
+	int path::firstCity()
+	{
+		return m_path[0];
+	}
 }

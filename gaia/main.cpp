@@ -1,5 +1,4 @@
 
-#include "cities.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "magicNumbers.h"
@@ -7,7 +6,7 @@
 #include "window.h"
 #include "draw_city.h"
 #include "cities.h"
-#include <thread>
+#include "path.h"
 
 int main()
 {
@@ -39,7 +38,7 @@ int main()
 			{
 				gaia::gaia* myTSP = new gaia::gaia(cities);
 				std::unique_ptr<gaia::gaia> TSP(myTSP);
-				TSP->run();
+				gaia::path bestPath = TSP->run();
 
 			}
 		}
@@ -48,11 +47,12 @@ int main()
 	// Implaentara en egen render buffer som tar en window pointer och sen har line och cities 
 	// och overlodes add op  buffer samt ta vort överflödig line och city
 	//göre stats istellet
-	// gör path grafic 
+	// gör path grafic <---- denna nu
 	// visa denn bästa för varge genaration
 	// först ta input sen enter
 	// sen visa den bästa lösnigen 
 	// sen tryck ender igen för att göra det igen
+	//gör cities statisk
 
 }
 

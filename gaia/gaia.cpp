@@ -8,7 +8,7 @@ gaia::gaia(std::shared_ptr<cities> cities) : m_runTimes(0), firstBest(0), m_path
     m_cities = cities;
 }
 
-void gaia::run()
+path gaia::run()
 {
     
     while (m_runTimes < AMUNT_OF_GENERATIONS)
@@ -22,6 +22,7 @@ void gaia::run()
         m_runTimes++;
     }
     m_paths.printBestArry();
+    return m_paths.getFirst();
 }
 
 void gaia::printGen()
@@ -48,4 +49,11 @@ paths sort(paths p)
     newPaths.setVectorOfPaths(newPathsVector);
     return newPaths;
 }
+}
+
+std::vector<draw_path> convertToDrawPath(gaia::path path)
+{
+    
+    draw_path first(path.getPosition(path.firstCity()), path.getPosition(path.lastCity()));
+    return std::vector<draw_path>();
 }

@@ -27,6 +27,7 @@ namespace gaia
 		void addRandom();
 		void printBestArry();
 		float getBestLength() const noexcept;
+		path getFirst();
 	};
 	paths calcLengh(paths myPaths);
 }

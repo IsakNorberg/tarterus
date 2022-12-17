@@ -30,32 +30,30 @@ bool window::isKeyDown(Key key) noexcept
 	return m_event.key.code == key;
 }
 
-bool window::isMuseKeyDown(Button button)
+bool window::isMuseKeyDown(Button button) noexcept
 {
 	return m_event.mouseButton.button == button;
 }
 
-void window::renderTheBuffer()
+void window::renderTheBuffer() noexcept
 {
-
-	std::for_each(m_renderBuffer.begin(), m_renderBuffer.end(), [&](draw_city object)
-	{
-		m_window.draw(object.getObject());
-		
-	});
-	
+	m_window.clear(CLEAR_COLOR);
+	m_renderBuffer.renderBuffer(m_window);
 	m_window.display();
-	//m_window.clear(CLEAR_COLOR);
 }
 
-void window::clearBuffer()
+void window::clearBuffer() noexcept
 {
 	m_renderBuffer.clear();
 }
 
-void window::addToRenderBuffer(draw_city i)
+void window::addToRenderBuffer(draw_city city)
 {
-	m_renderBuffer.push_back(i);
+	m_renderBuffer.addToBuffer(city);
+}
+void window::addToRenderBuffer(std::vector<draw_path> paths)
+{
+	m_renderBuffer.addToBuffer(paths);
 }
 
 sf::Vector2f window::getMusePosition()

@@ -154,18 +154,22 @@
     <ClCompile Include="cities.cpp" />
     <ClCompile Include="city.cpp" />
     <ClCompile Include="draw_city.cpp" />
+    <ClCompile Include="draw_path.cpp" />
     <ClCompile Include="gaia.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="path.cpp" />
     <ClCompile Include="paths.cpp" />
+    <ClCompile Include="render_buffer.cpp" />
     <ClCompile Include="seedRand.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cities.h" />
     <ClInclude Include="city.h" />
+    <ClInclude Include="draw_path.h" />
     <ClInclude Include="gaia.h" />
     <ClInclude Include="draw_city.h" />
+    <ClInclude Include="render_buffer.h" />
     <ClInclude Include="window.h" />
     <ClInclude Include="magicNumbers.h" />
     <ClInclude Include="path.h" />

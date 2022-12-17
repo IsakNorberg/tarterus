@@ -3,6 +3,7 @@
 #include <memory>
 #include "cities.h"
 #include "paths.h"
+#include "draw_path.h"
 
 namespace gaia
 {
@@ -15,9 +16,10 @@ namespace gaia
 		void printGen();
 	public:
 		gaia(std::shared_ptr<cities> cities);
-		void run();
-		
+		path run();
+
 	};
 
 	paths sort(paths p);
 }
+std::vector<draw_path> convertToDrawPath(gaia::path path);

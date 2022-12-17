@@ -1,0 +1,14 @@
+﻿  main.cpp
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\main.cpp(28,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\main.cpp(28,38): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  window.cpp
+  Generating Code...
+  gaia.vcxproj -> C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\x64\Debug\gaia.exe

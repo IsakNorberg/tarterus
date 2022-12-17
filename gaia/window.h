@@ -1,8 +1,11 @@
 #pragma once
 #include <string_view>
+#include <algorithm>
+
 #include "SFML/Graphics.hpp"
 #include "draw_city.h"
-#include <algorithm>
+#include "draw_path.h"
+#include "render_buffer.h"
 
 constexpr int WINDOW_HIGHT = 540;
 constexpr int WINDOW_WIDTH = 910;
@@ -16,21 +19,20 @@ class window
 {
 	sf::RenderWindow m_window;
 	sf::Event m_event;
-	std::vector<draw_city> m_renderBuffer;
+	render_buffer m_renderBuffer;
 public:
-	window(const window& rhs) = default;
-	window& operator=(const window& rhs) = default;
-	window(window&& rhs) = default;
-	window& operator=(window&& rhs) = default;
+
 	window();
 	bool isOpen() noexcept;
 	bool pollEvents() noexcept;
 	bool isEventType(EventType event) noexcept;
 	bool isKeyDown(Key key) noexcept;
-	bool isMuseKeyDown(Button button);
-	void renderTheBuffer();
-	void clearBuffer();
+	bool isMuseKeyDown(Button button) noexcept;
+	void renderTheBuffer() noexcept;
+	void clearBuffer() noexcept;
 	void addToRenderBuffer(draw_city city);
+	void addToRenderBuffer(std::vector<draw_path> paths);
 	sf::Vector2f getMusePosition();
 	~window();
 };
+
