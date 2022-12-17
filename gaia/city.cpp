@@ -38,6 +38,11 @@ void city::setY(int y)
 	m_y = y;
 }
 
+sf::Vector2f city::getXY()
+{
+	return {m_x, m_y};
+}
+
 void city::setXY(int x, int y)
 {
 	m_x = x;
