@@ -12,13 +12,20 @@ void render_buffer::addToBuffer(std::vector<draw_path> paths)
 
 void render_buffer::clear()
 {
-	m_cities.clear();
-	m_paths.clear();
+	if (!m_cities.empty())
+	{
+		m_cities.clear();
+	}
+	clerPaths();
 }
+	
 
 void render_buffer::clerPaths()
 {	
-	m_paths.clear();
+	if (!m_cities.empty())
+	{
+		m_paths.clear();
+	}
 }
 
 void render_buffer::renderBuffer(sf::RenderWindow& window)

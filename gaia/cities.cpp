@@ -15,7 +15,10 @@ namespace gaia
 
 	void cities::clerCitis()
 	{
-		m_cities.clear();
+		if (!m_cities.empty())
+		{
+			m_cities.clear();
+		}
 		m_lastId = 0;
 	}
 

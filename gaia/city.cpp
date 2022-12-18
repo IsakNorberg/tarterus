@@ -38,9 +38,10 @@ void city::setY(int y)
 	m_y = y;
 }
 
-sf::Vector2f city::getXY()
+position city::getXY()
 {
-	return {m_x, m_y};
+	
+	return {static_cast<float>(m_x), static_cast<float>(m_y)};
 }
 
 void city::setXY(int x, int y)

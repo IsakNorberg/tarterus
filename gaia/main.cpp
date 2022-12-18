@@ -36,21 +36,20 @@ int main()
 			activWindow.renderTheBuffer();
 			if (activWindow.isKeyDown(sf::Keyboard::Enter))
 			{
+				//activWindow.clearBuffer();
 				gaia::gaia* myTSP = new gaia::gaia(cities);
 				std::unique_ptr<gaia::gaia> TSP(myTSP);
 				gaia::path bestPath = TSP->run();
-
+				activWindow.addToRenderBuffer(convertToDrawPath(bestPath));
+				//cities->clerCitis();
 			}
 		}
 	}
-	//nästa steg göre en state manager för detta med en INPUT och EN SIMULATE om är typ som gia nu
-	// Implaentara en egen render buffer som tar en window pointer och sen har line och cities 
-	// och overlodes add op  buffer samt ta vort överflödig line och city
+	//nästa steg göre en state manager för detta med en INPUT och EN SIMULATE om är typ som gia nu 
 	//göre stats istellet
-	// gör path grafic <---- denna nu
 	// visa denn bästa för varge genaration
 	// först ta input sen enter
-	// sen visa den bästa lösnigen 
+	// sen visa den bästa lösnigen l
 	// sen tryck ender igen för att göra det igen
 	//gör cities statisk
 

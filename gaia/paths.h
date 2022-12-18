@@ -22,11 +22,11 @@ namespace gaia
 		std::vector<path> getVectorOfPaths();
 		void setVectorOfPaths(std::vector<path> paths);
 		
-		void printBest() const noexcept;
+		void printBest() noexcept;
 		void mateBest();
 		void addRandom();
 		void printBestArry();
-		float getBestLength() const noexcept;
+		float getBestLength() noexcept;
 		path getFirst();
 	};
 	paths calcLengh(paths myPaths);

@@ -3,7 +3,7 @@
 #include <memory>
 #include "cities.h"
 #include "paths.h"
-#include "draw_path.h"
+
 
 namespace gaia
 {
@@ -22,4 +22,4 @@ namespace gaia
 
 	paths sort(paths p);
 }
-std::vector<draw_path> convertToDrawPath(gaia::path path);
+

@@ -19,9 +19,9 @@ namespace gaia
             }
             for (int i = start; i < stop; i++)
             {
-                if (mypath.m_path[i] == mypath.m_path[j])
+                if (mypath.cityAtIndex(i) == mypath.cityAtIndex(j))
                 {
-                    mypath.m_path[j] = placeHolder;
+                    mypath.setCityAtindex( j, placeHolder);
                     duplicatesList[numberOfDuplicatesN] = j;
                     numberOfDuplicatesN++;
                 }
@@ -33,9 +33,9 @@ namespace gaia
 
         for (int i = 0; i < m_cities->size(); i++)
         {
-            if (mypath.m_path[i] != placeHolder)
+            if (mypath.cityAtIndex(i) != placeHolder)
             {
-                int temp = mypath.m_path[i];
+                int temp = mypath.cityAtIndex(i);
                 numbersIncluded[temp] = true;
             }
         }
@@ -54,7 +54,7 @@ namespace gaia
 
         for (int i = 0; i < numberOfMissingNumbersN; i++)
         {
-            mypath.m_path[duplicatesList[i]] = missingNumbersList[i];
+            mypath.setCityAtindex(duplicatesList[i], missingNumbersList[i]);
         }
         return mypath;
     }
@@ -91,11 +91,12 @@ namespace gaia
         return myPaths;
     }
 
-    void paths::printBest() const noexcept
+    void paths::printBest() noexcept
     {
         std::printf("The best and worst result for this generation is: ");
-        std::printf("%f, ", m_paths[0].m_length);
-        std::printf("%f ", m_paths[AMUNT_OF_PATHS - 1].m_length);
+
+        std::printf("%f, ", m_paths[0].getLength());
+        std::printf("%f ", m_paths[AMUNT_OF_PATHS - 1].getLength());
     }
 
     void paths::mateBest()
@@ -120,8 +121,8 @@ namespace gaia
             newTwo = m_paths[i + 1];
             for (int j = start; j < stop; j++)
             {
-                newOne.m_path[j] = m_paths[i + 1].m_path[j];
-                newTwo.m_path[j] = m_paths[i].m_path[j];
+                newOne.setCityAtindex(j , m_paths[i + 1].cityAtIndex(j));
+                newTwo.setCityAtindex(j , m_paths[i].cityAtIndex(j));
             }
             m_paths[i + offset] = newOne;
             m_paths[i + 1 + offset] = newTwo;
@@ -144,15 +145,15 @@ namespace gaia
     void paths::printBestArry()
     {
         printf("The best path ");
-        for (int myInt : m_paths[0].m_path)
+        for (int myInt : m_paths[0].getPath())
         {
             printf("%d ", myInt);
         }
     }
 
-    float paths::getBestLength() const noexcept
+    float paths::getBestLength() noexcept
     {
-        return m_paths[0].m_length;
+        return m_paths[0].getLength();
     }
 
     path paths::getFirst()

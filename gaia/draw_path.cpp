@@ -14,3 +14,25 @@ sf::VertexArray draw_path::getObject()
 {
 	return m_path;
 }
+
+std::vector<draw_path> convertToDrawPath(gaia::path path)
+{
+	std::vector<draw_path> outVector = {};
+	sf::Vector2f a = toSfVector(path.getPosition(path.firstCity()));
+	sf::Vector2f b = toSfVector(path.getPosition(path.lastCity()));
+
+	outVector.push_back(draw_path(a, b));
+	for (int i = 0; i < path.size() - 1; i++)
+	{
+		a = toSfVector(path.getPosition(path.cityAtIndex(i)));
+		b = toSfVector(path.getPosition(path.cityAtIndex(i+1)));
+		
+		outVector.push_back(draw_path(a, b));
+	}
+	return outVector;
+}
+
+sf::Vector2f toSfVector(position p)
+{
+	return {p.x,p.y};
+}

@@ -48,7 +48,7 @@ namespace gaia
 		}
 
 	}
-	sf::Vector2f path::getPosition(int cityIndex)
+	position path::getPosition(int cityIndex)
 	{
 		return m_cities->getCity(cityIndex).getXY();
 	}
@@ -59,5 +59,25 @@ namespace gaia
 	int path::firstCity()
 	{
 		return m_path[0];
+	}
+	int path::size()
+	{
+		return m_path.size();
+	}
+	int path::cityAtIndex(int index)
+	{
+		return m_path[index];
+	}
+	void path::setCityAtindex(int index, int cityNumber)
+	{
+		m_path[index] = cityNumber;
+	}
+	float path::getLength()
+	{
+		return m_length;
+	}
+	std::vector<int> path::getPath()
+	{
+		return m_path;
 	}
 }

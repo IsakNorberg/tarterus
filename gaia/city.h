@@ -1,7 +1,12 @@
 #pragma once
 
-#include "SFML/Graphics.hpp"
-struct city
+struct position
+{
+	float x;
+	float y;
+};
+
+class city
 {
 public:
 	city();
@@ -15,7 +20,7 @@ public:
 
 	int getY();
 	void setY(int y);
-	sf::Vector2f getXY();
+	position getXY();
 
 
 	void setXY(int x, int y);

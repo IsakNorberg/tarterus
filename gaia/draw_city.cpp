@@ -5,6 +5,7 @@ draw_city::draw_city(sf::Vector2f position)
 	m_body.setPosition(position);
 	m_body.setRadius(RADIUS);
 	m_body.setFillColor(sf::Color::Red);
+	m_body.setOrigin({RADIUS, RADIUS});
 }
 
 sf::CircleShape draw_city::getObject()

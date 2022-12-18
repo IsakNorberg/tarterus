@@ -43,7 +43,7 @@ paths sort(paths p)
     std::vector<path> newPathsVector = p.getVectorOfPaths();
     std::sort(std::execution::par_unseq, newPathsVector.begin(), newPathsVector.end(), [](path lhs, path rhs)
     {
-        return lhs.m_length < rhs.m_length;
+        return lhs.getLength() < rhs.getLength();
     });
     paths newPaths = p;
     newPaths.setVectorOfPaths(newPathsVector);
@@ -51,9 +51,3 @@ paths sort(paths p)
 }
 }
 
-std::vector<draw_path> convertToDrawPath(gaia::path path)
-{
-    
-    draw_path first(path.getPosition(path.firstCity()), path.getPosition(path.lastCity()));
-    return std::vector<draw_path>();
-}
