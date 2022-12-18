@@ -156,6 +156,7 @@
     <ClCompile Include="draw_city.cpp" />
     <ClCompile Include="draw_path.cpp" />
     <ClCompile Include="gaia.cpp" />
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="path.cpp" />
     <ClCompile Include="paths.cpp" />

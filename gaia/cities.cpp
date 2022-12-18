@@ -4,12 +4,10 @@ namespace gaia
 {
 	cities::cities()
 	{
-		
 	}
-
 	void cities::addCity(city city)
 	{
-		city.setId(m_lastId++);
+		city.setId(m_cities.size());
 		m_cities.push_back(city);
 	}
 
@@ -19,14 +17,12 @@ namespace gaia
 		{
 			m_cities.clear();
 		}
-		m_lastId = 0;
 	}
 
 	int cities::size()
 	{
 		return m_cities.size();
 	}
-
 	city cities::getCity(int cityIndex)
 	{
 		return m_cities[cityIndex];

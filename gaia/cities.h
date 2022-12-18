@@ -11,14 +11,13 @@ namespace gaia
 {
 	class cities
 	{
-		std::vector<city> m_cities;
-		int m_lastId = 0;
+		static std::vector<city> m_cities;
 	public:
 		cities();
-		void addCity(city city);
-		void clerCitis();
-		city getCity(int cityIndex);
-		int size();
+		static void addCity(city city);
+		static void clerCitis();
+		static city getCity(int cityIndex);
+		static int size();
 		float getDistanceBetweenCites(int cityA, int cityB) noexcept;
 	};
 }
