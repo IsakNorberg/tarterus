@@ -1,6 +1,4 @@
-﻿  draw_path.cpp
-  gaia.cpp
-  main.cpp
+﻿  main.cpp
 C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\main.cpp(27,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
@@ -11,10 +9,4 @@ C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gai
           [
               T=float
           ]
-  path.cpp
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\path.cpp(65,3): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  paths.cpp
-  render_buffer.cpp
-  window.cpp
-  Generating Code...
   gaia.vcxproj -> C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\x64\Debug\gaia.exe

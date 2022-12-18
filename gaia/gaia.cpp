@@ -1,14 +1,13 @@
 #include "gaia.h"
 #include <cstdio>
 
-namespace gaia
-{ 
-gaia::gaia(std::shared_ptr<cities> cities) : m_runTimes(0), firstBest(0), m_paths(cities)
+ 
+simulator::simulator(std::shared_ptr<gaia::cities> cities) : m_runTimes(0), firstBest(0), m_paths(cities)
 {
     m_cities = cities;
 }
 
-path gaia::run()
+gaia::path simulator::run()
 {
     
     while (m_runTimes < AMUNT_OF_GENERATIONS)
@@ -25,7 +24,7 @@ path gaia::run()
     return m_paths.getFirst();
 }
 
-void gaia::printGen()
+void simulator::printGen()
 {
     if (m_runTimes == 0)
     {
@@ -38,16 +37,16 @@ void gaia::printGen()
     ofBest = m_paths.getBestLength() / firstBest;
     printf("%.2f \n", ofBest);
 }
-paths sort(paths p)
+gaia::paths sort(gaia::paths p)
 {
-    std::vector<path> newPathsVector = p.getVectorOfPaths();
-    std::sort(std::execution::par_unseq, newPathsVector.begin(), newPathsVector.end(), [](path lhs, path rhs)
+    std::vector<gaia::path> newPathsVector = p.getVectorOfPaths();
+    std::sort(std::execution::par_unseq, newPathsVector.begin(), newPathsVector.end(), [](gaia::path lhs, gaia::path rhs)
     {
         return lhs.getLength() < rhs.getLength();
     });
-    paths newPaths = p;
+    gaia::paths newPaths = p;
     newPaths.setVectorOfPaths(newPathsVector);
     return newPaths;
 }
-}
+
 

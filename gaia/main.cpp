@@ -37,8 +37,8 @@ int main()
 			if (activWindow.isKeyDown(sf::Keyboard::Enter))
 			{
 				//activWindow.clearBuffer();
-				gaia::gaia* myTSP = new gaia::gaia(cities);
-				std::unique_ptr<gaia::gaia> TSP(myTSP);
+				simulator* myTSP = new simulator(cities);
+				std::unique_ptr<simulator> TSP(myTSP);
 				gaia::path bestPath = TSP->run();
 				activWindow.addToRenderBuffer(convertToDrawPath(bestPath));
 				//cities->clerCitis();

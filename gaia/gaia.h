@@ -5,21 +5,18 @@
 #include "paths.h"
 
 
-namespace gaia
+class simulator
 {
-	class gaia
-	{
-		std::shared_ptr<cities> m_cities;
-		int m_runTimes;
-		paths m_paths;
-		float firstBest;
-		void printGen();
-	public:
-		gaia(std::shared_ptr<cities> cities);
-		path run();
+	std::shared_ptr<gaia::cities> m_cities;
+	int m_runTimes;
+	gaia::paths m_paths;
+	float firstBest;
+	void printGen();
+public:
+	simulator(std::shared_ptr<gaia::cities> cities);
+	gaia::path run();
 
-	};
+};
 
-	paths sort(paths p);
-}
+gaia::paths sort(gaia::paths p);
 
