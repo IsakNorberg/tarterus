@@ -14,11 +14,15 @@ void simulator::run()
     
     while (m_runTimes < AMUNT_OF_GENERATIONS)
     {
+
         m_paths = calcLengh(m_paths);
+        m_window->pollEvents(); // poll events after every heavy function to minimize likelihood of the window not responding
         m_paths = sort(m_paths);
+        m_window->pollEvents();
         m_paths.printBest();
-        printGen();
+        printBest();
         m_paths.mateBest();
+        m_window->pollEvents();
         m_paths.addRandom();
         gaia::path best = m_paths.getFirst();
         m_window->addToRenderBuffer(convertToDrawPath(best));
@@ -26,10 +30,10 @@ void simulator::run()
         m_window->pollEvents();
         m_runTimes++;
     }
-    m_paths.printBestArry();
+    printBest();
 }
 
-void simulator::printGen()
+void simulator::printBest()
 {
     if (m_runTimes == 0)
     {

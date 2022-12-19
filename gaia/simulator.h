@@ -14,7 +14,7 @@ class simulator
 	int m_runTimes;
 	gaia::paths m_paths;
 	float firstBest;
-	void printGen();
+	void printBest();
 	void run();
 public:
 	simulator(std::shared_ptr<window> window, std::shared_ptr<gaia::cities> cities);

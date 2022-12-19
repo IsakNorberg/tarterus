@@ -31,7 +31,8 @@ bool input::run()
 				return false;
 			}
 			m_window->renderTheBuffer();
-			if (m_window->isKeyDown(sf::Keyboard::Enter))
+			if (m_window->isKeyDown(sf::Keyboard::Enter) &&
+				m_cities->size() >= 3)
 			{
 				return true;
 				
