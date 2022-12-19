@@ -46,7 +46,6 @@ namespace gaia
 		{
 			m_length = m_length + m_cities->getDistanceBetweenCites(m_path[i], m_path[i + 1]);
 		}
-
 	}
 	position path::getPosition(int cityIndex)
 	{

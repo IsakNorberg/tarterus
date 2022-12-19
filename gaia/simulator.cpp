@@ -30,7 +30,7 @@ void simulator::run()
         m_window->pollEvents();
         m_runTimes++;
     }
-    printBest();
+    m_paths.printBestArry();
 }
 
 void simulator::printBest()

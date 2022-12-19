@@ -1,11 +1,12 @@
 #include "city.h"
 
-city::city() : m_id(0), m_x(0), m_y(0), m_score(0)
+city::city() : m_id(0), m_x(0), m_y(0)
 {
 }
 
-city::city(int x, int y) :m_id(0), m_x(x), m_y(y), m_score(0)
+city::city(int x, int y) :m_id(0), m_x(x), m_y(y)
 {
+
 }
 
 int city::getId()
