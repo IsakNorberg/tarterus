@@ -2,7 +2,7 @@
 
 #include <random>
 #include <time.h>
-#include "magicNumbers.h"
+#include "settings.h"
 namespace gaia
 {
 	int getRandomNumber(int toNmber);

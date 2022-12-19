@@ -12,7 +12,7 @@ class render_buffer
 public:
 	void addToBuffer(draw_city city);
 	void addToBuffer(std::vector<draw_path> paths);
-
+	bool pathEmpty();
 	void clear();
 	void clerPaths();
 	void renderBuffer(sf::RenderWindow& window);

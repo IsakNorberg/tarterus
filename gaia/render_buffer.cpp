@@ -10,6 +10,11 @@ void render_buffer::addToBuffer(std::vector<draw_path> paths)
 	m_paths = paths;
 }
 
+bool render_buffer::pathEmpty()
+{
+	return m_paths.empty();
+}
+
 void render_buffer::clear()
 {
 	if (!m_cities.empty())
@@ -22,7 +27,7 @@ void render_buffer::clear()
 
 void render_buffer::clerPaths()
 {	
-	if (!m_cities.empty())
+	if (!m_paths.empty())
 	{
 		m_paths.clear();
 	}

@@ -1,14 +1,14 @@
 #pragma once
-#include "magicNumbers.h"
+#include "settings.h"
 #include "seedRand.h"
-
-
 #include "cities.h"
 #include "city.h"
 #include <vector>
 #include <algorithm>
 #include <ranges>
 #include <memory>
+constexpr int MIN_SAME_GEN = 1;
+constexpr int MIN_SWOP_SIZE = 1;
 
 namespace gaia
 {

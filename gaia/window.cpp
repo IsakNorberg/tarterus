@@ -53,6 +53,10 @@ void window::addToRenderBuffer(draw_city city)
 }
 void window::addToRenderBuffer(std::vector<draw_path> paths)
 {
+	if (!m_renderBuffer.pathEmpty())
+	{
+		m_renderBuffer.clerPaths();
+	}
 	m_renderBuffer.addToBuffer(paths);
 }
 

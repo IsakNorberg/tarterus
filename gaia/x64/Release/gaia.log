@@ -1,0 +1,25 @@
+﻿  cities.cpp
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(10,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(24,3): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(33,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(34,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(35,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(36,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  city.cpp
+  draw_city.cpp
+  draw_path.cpp
+  simulator.cpp
+  input.cpp
+  main.cpp
+  path.cpp
+C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\path.cpp(65,3): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  paths.cpp
+  render_buffer.cpp
+  seedRand.cpp
+  state_manager.cpp
+  window.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1062 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  gaia.vcxproj -> C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\x64\Release\gaia.exe

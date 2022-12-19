@@ -1,29 +1,13 @@
-﻿  cities.cpp
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(7,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(21,3): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(30,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(31,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(32,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\cities.cpp(33,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  draw_path.cpp
-  gaia.cpp
+﻿  draw_path.cpp
   input.cpp
   main.cpp
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\main.cpp(27,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\main.cpp(27,38): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
   path.cpp
 C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\gaia\path.cpp(65,3): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   paths.cpp
   render_buffer.cpp
+  seedRand.cpp
+  simulator.cpp
+  state_manager.cpp
   window.cpp
   Generating Code...
-cities.obj : error LNK2001: unresolved external symbol "private: static class std::vector<class city,class std::allocator<class city> > gaia::cities::m_cities" (?m_cities@cities@gaia@@0V?$vector@Vcity@@V?$allocator@Vcity@@@std@@@std@@A)
-C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\x64\Debug\gaia.exe : fatal error LNK1120: 1 unresolved externals
+  gaia.vcxproj -> C:\Users\isaka\OneDrive\Skrivbord\programring_project\Uni\AIA3\gaia\tarterus\x64\Debug\gaia.exe
